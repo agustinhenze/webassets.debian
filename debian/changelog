@@ -1,0 +1,5 @@
+webassets (20121113git-1) unstable; urgency=low
+
+  * Initial release, git upstream revision b53ef15 (Closes: #690089).
+
+ -- Agustin Henze <tin@sluc.org.ar>  Wed, 09 Oct 2012 15:04:41 -0300

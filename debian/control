@@ -1,0 +1,49 @@
+Source: webassets
+Section: python
+Priority: optional
+Maintainer: Agustin Henze <tin@sluc.org.ar>
+Uploaders: Ulises Vitulli <dererk@debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: python-all,
+ python-support (>= 1),
+ python-sphinx,
+ python-setuptools,
+ python2.7-doc,
+ python-django,
+Standards-Version: 3.9.3
+XS-Python-Version: all
+Homepage: https://github.com/miracle2k/webassets
+
+Package: python-webassets
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Suggests: python-webassets-doc,
+ yui-compressor,
+ node-uglify,
+ python-cssutils,
+ node-less,
+ ruby-sass,
+Description: Asset management application for Python web development
+ Assets helps you merge and compress any JavaScript and CSS files on your web
+ development project.
+ .
+ Webassets provides some special integration with:
+  * Django
+  * Flask
+  * Pyramid
+
+Package: python-webassets-doc
+Architecture: all
+Depends: ${misc:Depends}, libjs-jquery, libjs-underscore
+Suggests: python-doc
+Section: doc
+Description: Asset management application for Python web development - doc
+ Assets helps you merge and compress any JavaScript and CSS files on your web
+ development project.
+ .
+ Webassets provides some special integration with:
+  * Django
+  * Flask
+  * Pyramid
+ .
+ This package contains API documentation.

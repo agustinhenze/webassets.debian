@@ -1,0 +1,17 @@
+Author: Agustin Henze <tin@sluc.org.ar>
+Description: Removed URL of the flask and django-assets docs and changed path of
+ the python doc in the intersphinx mapping.
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -199,9 +199,7 @@
+ #latex_use_modindex = True
+ 
+ intersphinx_mapping = {
+-    'python': ('http://docs.python.org/', None),
+-    'flask': ('http://elsdoerfer.name/docs/flask-assets/', None),
+-    'django': ('http://elsdoerfer.name/docs/django-assets/', None),
++    'python': ('/usr/share/doc/python2.7/html', None),
+ }
+ 
+ extlinks = {'django': ('http://elsdoerfer.name/docs/django-assets/%s.html', None)}

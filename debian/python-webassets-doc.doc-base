@@ -1,0 +1,10 @@
+Document: python-webassets-reference-manual
+Title: Python Webassets Library Reference Manual
+Author: Michael Elsdörfer <http://elsdoerfer.name>
+Abstract: Asset management application for Python web development - use it to
+ merge and compress your JavaScript and CSS files.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-webassets-doc/html/index.html
+Files: /usr/share/doc/python-webassets-doc/html/*
