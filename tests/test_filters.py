@@ -693,6 +693,18 @@ class TestCssRewrite(TempEnvironmentHelper):
         self.mkbundle('in.css', filters=cssrewrite, output='out.css').build()
         assert self.get('out.css') == '''h1 { background: url(/new/sub/icon.png) }'''
 
+    def test_not_touching_data_uri(self):
+        """Data uris are left alone."""
+        # For this bug to trigger, env.url needs to have a directory part
+        self.env.url = '/sub/dir'
+        self.create_files({'in.css': '''h1 {
+            background-image: url(data:image/png;base64,iVBORw0KGgoA);
+        }'''})
+        self.mkbundle('in.css', filters='cssrewrite', output='out.css').build()
+        assert self.get('out.css') == '''h1 {
+            background-image: url(data:image/png;base64,iVBORw0KGgoA);
+        }'''
+
 
 class TestDataUri(TempEnvironmentHelper):
 
