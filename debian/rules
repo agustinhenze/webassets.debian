@@ -2,7 +2,7 @@
 # -*- makefile -*-
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+# export DH_VERBOSE=1
 
 PYVERS :=  $(shell pyversions -s)
 
@@ -35,5 +35,4 @@ override_dh_auto_install:
 	rm docs/_build/html/_static/sidebar.js
 
 override_dh_installexamples:
-	dh_installexamples
-	rm -f debian/python-webassets-doc/usr/share/doc/python-webassets-doc/examples/appengine/webassets
+	dh_installexamples -X.gitignore
