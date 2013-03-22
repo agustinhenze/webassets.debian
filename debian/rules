@@ -7,7 +7,7 @@
 PYVERS :=  $(shell pyversions -s)
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --with sphinxdoc
 
 override_dh_auto_build:
 
@@ -28,11 +28,6 @@ override_dh_auto_install:
 	cd docs; \
 	make html; \
 	cd -
-	rm docs/_build/html/_static/underscore.js
-	rm docs/_build/html/_static/jquery.js
-	rm docs/_build/html/_static/doctools.js
-	rm docs/_build/html/_static/searchtools.js
-	rm docs/_build/html/_static/sidebar.js
 
 override_dh_installexamples:
 	dh_installexamples -X.gitignore
