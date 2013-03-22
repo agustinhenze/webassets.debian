@@ -1,3 +1,17 @@
+webassets (3:0.8-1) unstable; urgency=low
+
+  * Imported Upstream version 0.8 (Closes: #703541)
+  * Added exclusion of the .gitignore files to dh_installexamples
+  * Use sphinxdoc option from debhelper to build the documentation:
+    - debian/control: Added version on python-sphinx dependency and updated
+      dependencies on python-webassets-doc.
+    - debian/python-webassets-doc.links: removed, now handled by dh_sphinxdoc.
+    - debian/rules: Clean-up symlinks.
+  * Bumped Standard-Version to 3.9.4 (no changes required)
+  * Added Vcs-git and Vcs-browser to debian/control file.
+
+ -- Agustin Henze <tin@sluc.org.ar>  Thu, 21 Mar 2013 22:41:53 -0300
+
 webassets (20121113git-1) unstable; urgency=low
 
   * Initial release, git upstream revision b53ef15 (Closes: #690089).
