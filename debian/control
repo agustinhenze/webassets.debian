@@ -10,7 +10,7 @@ Build-Depends-Indep: python-all,
  python-setuptools,
  python2.7-doc,
  python-django,
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 XS-Python-Version: all
 Homepage: https://github.com/miracle2k/webassets
 
