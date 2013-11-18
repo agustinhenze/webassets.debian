@@ -6,6 +6,7 @@ webassets (3:0.9-1) unstable; urgency=low
   * Add Python3 support
   * Recompress the original source for remove the egg-info folder
   * Test suite execution
+    * Add bdepend on python3?-nose and python3?-mock
   * Use pybuild as buildsystem
 
  -- Agustin Henze <tin@debian.org>  Sat, 16 Nov 2013 13:21:01 -0300
