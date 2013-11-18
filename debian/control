@@ -1,17 +1,21 @@
 Source: webassets
 Section: python
 Priority: optional
-Maintainer: Agustin Henze <tin@sluc.org.ar>
+Maintainer: Agustin Henze <tin@debian.org>
 Uploaders: Ulises Vitulli <dererk@debian.org>
-Build-Depends: debhelper (>= 9)
-Build-Depends-Indep: python-all,
- python-support (>= 1),
- python-sphinx (>= 1.0.7+dfsg),
+Build-Depends:
+ debhelper (>= 9),
+ dh-python,
+ python-all,
  python-setuptools,
- python2.7-doc,
- python-django,
-Standards-Version: 3.9.4
-XS-Python-Version: all
+ python3-all,
+ python3-setuptools,
+ python-sphinx (>= 1.0.7+dfsg) | python3-sphinx,
+ python-docutils,
+ help2man,
+Standards-Version: 3.9.5
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
 Homepage: https://github.com/miracle2k/webassets
 Vcs-Git: git://anonscm.debian.org/collab-maint/webassets.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/webassets.git
@@ -19,20 +23,36 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/webassets.git
 Package: python-webassets
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}
-Suggests: python-webassets-doc,
+Suggests:
+ python-webassets-doc,
  yui-compressor,
  node-uglify,
  python-cssutils,
  node-less,
  ruby-sass,
+ cssmin,
 Description: Asset management application for Python web development
  Assets helps you merge and compress any JavaScript and CSS files on your web
  development project.
  .
- Webassets provides some special integration with:
-  * Django
-  * Flask
-  * Pyramid
+ This is the Python 2 version of the package.
+
+Package: python3-webassets
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests:
+ python-webassets-doc,
+ yui-compressor,
+ node-uglify,
+ python-cssutils,
+ node-less,
+ ruby-sass,
+ cssmin,
+Description: Asset management application for Python web development (Python 3)
+ Assets helps you merge and compress any JavaScript and CSS files on your web
+ development project.
+ .
+ This is the Python 3 version of the package.
 
 Package: python-webassets-doc
 Architecture: all
@@ -42,10 +62,5 @@ Section: doc
 Description: Asset management application for Python web development - doc
  Assets helps you merge and compress any JavaScript and CSS files on your web
  development project.
- .
- Webassets provides some special integration with:
-  * Django
-  * Flask
-  * Pyramid
  .
  This package contains API documentation.

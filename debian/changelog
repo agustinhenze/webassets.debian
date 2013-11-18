@@ -1,3 +1,15 @@
+webassets (3:0.9-1) unstable; urgency=low
+
+  * Imported Upstream version 0.9
+  * Improvements in packages description
+  * Manpages generated using help2man
+  * Add Python3 support
+  * Recompress the original source for remove the egg-info folder
+  * Test suite execution
+  * Use pybuild as buildsystem
+
+ -- Agustin Henze <tin@debian.org>  Sat, 16 Nov 2013 13:21:01 -0300
+
 webassets (3:0.8-1) unstable; urgency=low
 
   * Imported Upstream version 0.8 (Closes: #703541)
