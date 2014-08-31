@@ -19,7 +19,6 @@ override_dh_auto_clean:
 	rm -rf docs/_build
 	rm -rf src/webassets.egg-info/
 	rm -f debian/webassets.1
-	rm -f debian/webassets3.1
 
 override_dh_auto_install:
 	dh_auto_install
@@ -27,36 +26,19 @@ override_dh_auto_install:
 	cd docs; \
 		make html; \
 		cd -
-	mv debian/python3-webassets/usr/bin/webassets debian/python3-webassets/usr/bin/webassets3
+	rm -f debian/python-webassets/usr/bin/webassets
 	help2man --version-string=$(UVERSION) \
 				--name="Asset management application for Python web development" \
 				--no-info \
-				debian/python-webassets/usr/bin/webassets > debian/webassets.1
-	help2man --version-string=$(UVERSION) \
-				--name="Asset management application for Python web development" \
-				--no-info \
-				debian/python3-webassets/usr/bin/webassets3 > debian/webassets3.1
+				debian/python3-webassets/usr/bin/webassets > debian/webassets.1
 
 override_dh_installexamples:
 	dh_installexamples -X.gitignore
-
-override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	set -ex; \
-		for py in $(PYVERS) $(PY3VERS); do \
-			$$py run_tests.py; \
-		done
-endif
 
 get-orig-source:
 	@if [ ! -d "debian" ] ; then \
 		echo 'Run this from the top directory of the Debian source' >&2; \
 		exit 1; \
 	fi
-	mkdir -p ../tmp/webassets_$(UVERSION)
-	wget http://pypi.python.org/packages/source/w/webassets/webassets-$(UVERSION).tar.gz \
-		-O ../tmp/webassets_$(UVERSION).tar.gz;
-	tar xf ../tmp/webassets_$(UVERSION).tar.gz \
-		-C ../tmp/webassets_$(UVERSION) \
-		--exclude=*egg-info*;
-	tar -C ../tmp/webassets_$(UVERSION) webassets-$(UVERSION) -c --xz -f ../webassets_$(UVERSION).orig.tar.xz
+	uscan --noconf --verbose --rename --destdir=$(CURDIR) \
+		--check-dirname-level=0 --force-download --download-version $(UVERSION)
