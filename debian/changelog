@@ -1,3 +1,11 @@
+webassets (3:0.10.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.10.1
+  * Add dependency on node-requirejs
+  * Cleaning up debian/rules
+
+ -- Agustin Henze <tin@debian.org>  Sat, 30 Aug 2014 17:22:47 -0700
+
 webassets (3:0.9-1) unstable; urgency=low
 
   * Imported Upstream version 0.9
