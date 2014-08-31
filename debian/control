@@ -45,6 +45,7 @@ Description: Asset management application for Python web development
 Package: python3-webassets
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
+Breaks: python-webassets (<= 3:0.9-1)
 Suggests:
  python-webassets-doc,
  yui-compressor,
