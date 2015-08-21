@@ -17,7 +17,7 @@ Build-Depends:
  python-nose,
  python-mock,
  help2man,
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/miracle2k/webassets
