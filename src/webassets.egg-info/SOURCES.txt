@@ -71,9 +71,11 @@ src/webassets/filter/jsmin.py
 src/webassets/filter/jst.py
 src/webassets/filter/less.py
 src/webassets/filter/less_ruby.py
+src/webassets/filter/libsass.py
 src/webassets/filter/pyscss.py
 src/webassets/filter/requirejs.py
 src/webassets/filter/sass.py
+src/webassets/filter/slimit.py
 src/webassets/filter/slimmer.py
 src/webassets/filter/spritemapper.py
 src/webassets/filter/stylus.py
