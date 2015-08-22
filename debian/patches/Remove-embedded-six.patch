@@ -420,3 +420,29 @@ Index: webassets/src/webassets/six.py
 -def with_metaclass(meta, *bases):
 -    """Create a base class with a metaclass."""
 -    return meta("NewBase", bases, {})
+Index: webassets/src/webassets/bundle.py
+===================================================================
+--- webassets.orig/src/webassets/bundle.py
++++ webassets/src/webassets/bundle.py
+@@ -1,9 +1,9 @@
+ from contextlib import contextmanager
+ import os
+ from os import path
+-from webassets import six
+-from webassets.six.moves import map
+-from webassets.six.moves import zip
++import six
++from six.moves import map
++from six.moves import zip
+ 
+ from .filter import get_filter
+ from .merge import (FileHunk, UrlHunk, FilterTool, merge, merge_filters,
+@@ -574,7 +574,7 @@ class Bundle(object):
+         called from the command line, there is no need to lock.
+         """
+         extra_filters = extra_filters or []
+-        
++
+         if not self.output:
+             raise BuildError('No output target found for %s' % self)
+ 
