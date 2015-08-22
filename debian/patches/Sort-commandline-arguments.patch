@@ -1,0 +1,19 @@
+Author: Reiner Herrmann <reiner@reiner-h.de>
+Description: Sort commandline arguments to produce stable output
+ The help text is used to generate a manpage with help2man.
+ With an unstable argument order the generated manpage will
+ differ on every build.
+
+Index: webassets-0.10.1/src/webassets/script.py
+===================================================================
+--- webassets-0.10.1.orig/src/webassets/script.py
++++ webassets-0.10.1/src/webassets/script.py
+@@ -448,7 +448,7 @@ class GenericArgparseImplementation(obje
+ 
+         # Add subparsers.
+         subparsers = parser.add_subparsers(dest='command')
+-        for command in CommandLineEnvironment.DefaultCommands.keys():
++        for command in sorted(CommandLineEnvironment.DefaultCommands.keys()):
+             command_parser = subparsers.add_parser(command)
+             maker = getattr(self, 'make_%s_parser' % command, False)
+             if maker:
