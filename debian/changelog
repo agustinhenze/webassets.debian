@@ -1,3 +1,17 @@
+webassets (3:0.11-1) unstable; urgency=low
+
+  [ Reiner Herrmann ]
+  * Added patch to produce stable help text (Closes: #775135).
+
+  [ Agustin Henze ]
+  * Fix debian/watch file
+  * Imported Upstream version 0.11
+  * Bumped Standard-Version to 3.9.6 (no changes required)
+  * Add new dependency on python3?-jinja2
+  * Remove embedded six.py (Closes: #783464)
+
+ -- Agustin Henze <tin@debian.org>  Sat, 22 Aug 2015 02:26:09 +0200
+
 webassets (3:0.10.1-2) unstable; urgency=medium
 
   * Add breaks field between python3-webassets and python-webassets <= 3:0.9-1

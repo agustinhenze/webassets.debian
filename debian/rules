@@ -19,6 +19,11 @@ override_dh_auto_clean:
 	rm -rf docs/_build
 	rm -rf src/webassets.egg-info/
 	rm -f debian/webassets.1
+	rm -f src/webassets/six.py
+
+override_dh_auto_build:
+	ln -s /usr/lib/python3/dist-packages/webassets/six.py src/webassets/six.py
+	dh_auto_build
 
 override_dh_auto_install:
 	dh_auto_install
