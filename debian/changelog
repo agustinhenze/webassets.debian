@@ -1,3 +1,10 @@
+webassets (3:0.11-2) unstable; urgency=medium
+
+  * Remove unused patches
+  * Fix FTBFS, remove embedded six.py module on .deb generated
+
+ -- Agustin Henze <tin@debian.org>  Tue, 25 Aug 2015 20:03:41 +0200
+
 webassets (3:0.11-1) unstable; urgency=low
 
   [ Reiner Herrmann ]
