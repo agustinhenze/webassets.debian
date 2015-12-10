@@ -1,17 +1,8 @@
-webassets (3:0.11.1-1.1) unstable; urgency=medium
+webassets (3:0.11.1-1) UNRELEASED; urgency=medium
 
-  * Non-maintainer upload.
-  * Updates cssmin dependencies to correctly include python-cssmin and
-    python3-cssmin packages (Closes: #826860).
+  * Imported Upstream version 0.11.1
 
- -- Stuart Prescott <stuart@debian.org>  Sun, 11 Sep 2016 00:55:33 +1000
-
-webassets (3:0.11.1-1) unstable; urgency=medium
-
-  * New upstream release.
-  * Add missing build-dep on pytest (Closes: #805242).
-
- -- Ulises Vitulli <dererk@debian.org>  Fri, 01 Jan 2016 19:28:35 -0300
+ -- Agustin Henze <tin@sluc.org.ar>  Thu, 10 Dec 2015 08:21:34 -0300
 
 webassets (3:0.11-2) unstable; urgency=medium
 
