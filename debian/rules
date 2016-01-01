@@ -10,6 +10,7 @@ PYVERS = $(shell pyversions -r)
 PY3VERS = $(shell py3versions -r)
 export PYBUILD_NAME=$(PACKAGE_NAME)
 export PYTHONPATH=$(CURDIR)/src
+export PYBUILD_DISABLE=test
 
 %:
 	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
