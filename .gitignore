@@ -1,1 +1,25 @@
-.*.swp
+# Eclipse 
+/.project
+/.pydevproject
+/.settings
+# WingIDE
+/*.wpr
+# JetBrains
+/.idea
+
+# distutils
+/build
+/dist
+/src/webassets.egg-info/
+/MANIFEST
+/docs/_build/*
+
+/.tox
+/LOCAL_TODO*
+
+*.~*
+*.pyc
+
+/envdev*
+/.virtualenv*
+/node_modules/
