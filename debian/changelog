@@ -1,3 +1,10 @@
+webassets (3:0.11.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add missing build-dep on pytest (Closes: #805242).
+
+ -- Ulises Vitulli <dererk@debian.org>  Fri, 01 Jan 2016 19:28:35 -0300
+
 webassets (3:0.11-2) unstable; urgency=medium
 
   * Remove unused patches

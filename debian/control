@@ -20,6 +20,8 @@ Build-Depends:
  python-jinja2,
  python-six,
  help2man,
+ python-pytest,
+ python3-pytest
 Standards-Version: 3.9.6
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
