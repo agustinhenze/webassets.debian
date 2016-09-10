@@ -39,7 +39,7 @@ Suggests:
  python-cssutils,
  node-less,
  ruby-sass,
- cssmin,
+ python-cssmin | cssmin (<= 0.2.0-1),
  node-requirejs,
 Description: Asset management application for Python web development
  Assets helps you merge and compress any JavaScript and CSS files on your web
@@ -58,7 +58,7 @@ Suggests:
  python-cssutils,
  node-less,
  ruby-sass,
- cssmin,
+ python3-cssmin,
  node-requirejs,
 Description: Asset management application for Python web development (Python 3)
  Assets helps you merge and compress any JavaScript and CSS files on your web
