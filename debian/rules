@@ -6,8 +6,6 @@
 
 UVERSION := $(shell dpkg-parsechangelog | sed -n -e's/^Version: \([0-9]:\)\(.*\)-[^-]\+/\2/p')
 PACKAGE_NAME := $(shell dpkg-parsechangelog | sed -n -e's/^Source: \(.*\)\+/\1/p')
-PYVERS = $(shell pyversions -r)
-PY3VERS = $(shell py3versions -r)
 export PYBUILD_NAME=$(PACKAGE_NAME)
 export PYTHONPATH=$(CURDIR)/src
 export PYBUILD_DISABLE=test
