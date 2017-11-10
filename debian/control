@@ -22,7 +22,7 @@ Build-Depends:
  help2man,
  python-pytest,
  python3-pytest
-Standards-Version: 3.9.6
+Standards-Version: 4.1.1
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/miracle2k/webassets
