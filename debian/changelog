@@ -1,3 +1,18 @@
+webassets (3:0.12.1-1) unstable; urgency=medium
+
+  * Start using pristine-tar
+  * New upstream version 0.12.1 (Closes: #879927)
+  * Remove wrongly added include-binaries in the past (Closes: #837328)
+  * Remove egg-info folder from source
+  * debian/rules:
+    - Remove unused variables
+    - Remove dpkg-parsechangelog use pkg-info.mk instead
+  * debian/control:
+    - Bumped Standard-Version to 4.1.1 (no changes required)
+    - Use secure uri on vcs fields
+
+ -- Agustin Henze <tin@debian.org>  Fri, 10 Nov 2017 07:25:31 -0300
+
 webassets (3:0.11.1-1.1) unstable; urgency=medium
 
   * Non-maintainer upload.
