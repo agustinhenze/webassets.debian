@@ -4,9 +4,9 @@
 # Uncomment this to turn on verbose mode.
 # export DH_VERBOSE=1
 
-UVERSION := $(shell dpkg-parsechangelog | sed -n -e's/^Version: \([0-9]:\)\(.*\)-[^-]\+/\2/p')
-PACKAGE_NAME := $(shell dpkg-parsechangelog | sed -n -e's/^Source: \(.*\)\+/\1/p')
-export PYBUILD_NAME=$(PACKAGE_NAME)
+include /usr/share/dpkg/pkg-info.mk
+
+export PYBUILD_NAME=$(DEB_SOURCE)
 export PYTHONPATH=$(CURDIR)/src
 export PYBUILD_DISABLE=test
 
@@ -26,7 +26,7 @@ override_dh_auto_install:
 		make html; \
 		cd -
 	rm -f debian/python-webassets/usr/bin/webassets
-	help2man --version-string=$(UVERSION) \
+	help2man --version-string=$(DEB_VERSION_UPSTREAM) \
 				--name="Asset management application for Python web development" \
 				--no-info \
 				debian/python3-webassets/usr/bin/webassets > debian/webassets.1
@@ -40,4 +40,4 @@ get-orig-source:
 		exit 1; \
 	fi
 	uscan --noconf --verbose --rename --destdir=$(CURDIR) \
-		--check-dirname-level=0 --force-download --download-version $(UVERSION)
+		--check-dirname-level=0 --force-download --download-version $(DEB_VERSION_UPSTREAM)
